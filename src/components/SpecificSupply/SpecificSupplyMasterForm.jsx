@@ -25,7 +25,6 @@ const SpecificSupplyMasterForm = () => {
   const [DropdownSupplier, setDropdownSupplier] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     ItemName: "",
     SupplierName: "",
@@ -76,7 +75,8 @@ const SpecificSupplyMasterForm = () => {
         if (res.type === "POSTSPECIFICSUPPLIERSUCESSS") {
           if (res.payload.message === "Supplier Details added successfully") {
             setsucessmodal("Data Save Successfully");
-            dispatch(GetSPECIFICSuppliernameData);
+            // dispatch(GetSPECIFICSuppliernameData);
+            dispatch(GetSPECIFICSuppliernameData("~", "~", "~", "25", "1"));
             setFormData({
               ItemName: "",
               SupplierName: "",

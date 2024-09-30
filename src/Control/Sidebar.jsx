@@ -24,6 +24,7 @@ const Sidebar = React.memo(
   }, [loggeddata?.user?.access?.userId]);
 
     useEffect(() => {
+      dispatch(LoadLoggedusermenulist(loggeddata?.user?.access?.userId));
       const savedTab = localStorage.getItem("activeonlineTab");
       if (savedTab) {
         setActiveonlineTab(savedTab);

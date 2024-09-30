@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
-import { Loginpost } from "../Redux/AuthReducer/action";
+import { LoadLoggedusermenulist, Loginpost } from "../Redux/AuthReducer/action";
 import { useNavigate } from "react-router-dom";
 import ErrorModal from "../model/ErrorModal";
 import SuccessModal from "../model/SuccessModal";
@@ -27,6 +27,7 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
   const [loading, setLoading] = useState(false);
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -42,12 +43,13 @@ const Login = () => {
             "useronlinelogged",
             JSON.stringify(actionResult.payload.data)
           );
-        
+          dispatch(LoadLoggedusermenulist(loggeddata?.user?.access?.userId));
           setsucessmodal("Login Successfully");
           setLoading(false);
 
           setTimeout(() => {
             navigate("/");
+            window.location.reload();
           }, 1000);
         }
       }
@@ -75,7 +77,7 @@ const Login = () => {
   const handleCloseErrorModal = () => {
     setErrorm(null);
   };
-  
+
   const handleclosesucessmodal = () => {
     setsucessmodal(null);
   };
@@ -85,11 +87,8 @@ const Login = () => {
       <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
         <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-
             <div className="max-w-10">
-              <h2>
-
-              </h2>
+              <h2></h2>
             </div>
 
             <div className="mt-12 flex flex-col items-center">

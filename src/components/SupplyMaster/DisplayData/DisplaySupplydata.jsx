@@ -68,10 +68,10 @@ const DisplaySupplydata = ({ setActiveonlineTab }) => {
                   <th className="border border-gray-300 px-4 py-2">
                     Contact No
                   </th>
-                  <th className="border border-gray-300 px-4 py-2">state</th>
+                  <th className="border border-gray-300 px-4 py-2">State</th>
                   <th className="border border-gray-300 px-4 py-2">City</th>
-                  <th className="border border-gray-300 px-4 py-2">street</th>
-                  <th className="border border-gray-300 px-4 py-2">zipCode</th>
+                  <th className="border border-gray-300 px-4 py-2">Street</th>
+                  <th className="border border-gray-300 px-4 py-2">ZipCode</th>
                   <th className="border border-gray-300 px-4 py-2">
                     Product Categories
                   </th>
@@ -89,6 +89,12 @@ const DisplaySupplydata = ({ setActiveonlineTab }) => {
                 {loading ? (
                   Array.from({ length: 20 }, (_, index) => (
                     <tr key={index} className="animate-pulse">
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                      </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="h-4 bg-gray-300 rounded"></div>
                       </td>

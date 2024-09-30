@@ -160,7 +160,7 @@ const ListScreen = React.memo(({ selectedUserId, selectedUser, setSelectedUser, 
           </table>
         )}
       </div>
-      <button className="btn btn-primary mt-5 border border-blue-500 bg-blue-500 text-white p-2" onClick={handleSaveChanges}>Update</button>
+      <button className="btn btn-primary rounded-lg mt-5 border border-blue-500 bg-blue-500 text-white p-2" onClick={handleSaveChanges}>Update</button>
       {sucessmodel && <SuccessModal msg={sucessmodel} onClose={() => setsucessmodal(null)} />}
       {errormodel && <ErrorModal msg={errormodel} onClose={() => setErrormodel(null)} />}
     </>

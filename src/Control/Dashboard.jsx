@@ -20,31 +20,31 @@ const Dashboard = ({ activeonlineTab, setEmployeeId, employeeId, setActiveonline
     <div className="flex-grow overflow-y-auto pt-[62px]">
       {activeonlineTab === "home" && <Homelandingpage />}
 
-      {activeonlineTab === "pageaccessmaster" && (
+      {activeonlineTab === "page access master" && (
         <div>
           <PageScreenAcess />
         </div>
       )}
 
-      {activeonlineTab === "accessmaster" && (
+      {activeonlineTab === "access master" && (
         <div>
           <ApplicationAcessMaster setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-      {activeonlineTab === "supplierportfolio" && (
+      {activeonlineTab === "supplier portfolio" && (
         <div>
           <SupplyMasterForm setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-      {activeonlineTab === "suppliercostanalysis" && (
+      {activeonlineTab === "supplier cost analysis" && (
         <div>
          <SpecificSupplyMasterForm setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-    {activeonlineTab === "productinventory" && (
+    {activeonlineTab === "product inventory" && (
         <div>
           <ItemsMasterScreen setActiveonlineTab={setActiveonlineTab} />
         </div>

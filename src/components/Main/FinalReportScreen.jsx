@@ -107,7 +107,7 @@ const FinalReportScreen = ({ setActiveonlineTab }) => {
 
   return (
     <div>
-      <div className="bg-slate-300 px-4">
+      <div className="bg-slate-300 text-[13px] px-4">
         <PageAcessMasterForm
           formData={formData}
           handleChange={handleChange}

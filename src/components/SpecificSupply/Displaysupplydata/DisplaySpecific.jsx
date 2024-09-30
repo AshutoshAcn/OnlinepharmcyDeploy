@@ -70,7 +70,7 @@ const DisplaySpecificSupplydata = ({ setActiveonlineTab }) => {
 
   return (
     <div>
-      <div className=" px-4">
+      <div className="bg-slate-300 px-4 ">
         <CostAnalysisForm
           formData={formData}
           handleChange={handleChange}
@@ -97,10 +97,10 @@ const DisplaySpecificSupplydata = ({ setActiveonlineTab }) => {
                   <th className="border border-gray-300 px-4 py-2">ItemName</th>
 
                   <th className="border border-gray-300 px-4 py-2">
-                    Description
+                    Supplier Name
                   </th>
                   <th className="border border-gray-300 px-4 py-2">
-                    Supplier Name
+                    Description
                   </th>
                   <th className="border border-gray-300 px-4 py-2">Cost</th>
                 </tr>
@@ -134,9 +134,8 @@ const DisplaySpecificSupplydata = ({ setActiveonlineTab }) => {
                   GetSupplydataaa?.map((el, i) => (
                     <tr key={i} className="hover:bg-slate-100 text-center">
                       <td className="border px-4 py-2">{el.ItemName}</td>
-
-                      <td className="border px-4 py-2">{el.Description}</td>
                       <td className="border px-4 py-2">{el.SupplierName}</td>
+                      <td className="border px-4 py-2">{el.Description}</td>
                       <td className="border px-4 py-2 w-[60px] text-center">
                         {el.Cost}
                       </td>
