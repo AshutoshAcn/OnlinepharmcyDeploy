@@ -4,7 +4,6 @@ import { FaEdit } from "react-icons/fa";
 import { GetSuppliernameData } from "../../../Redux/SupplyReducer/action";
 import Editmodel from "../Editmodal/Editmodel";
 
-
 const DisplaySupplydata = ({ setActiveTab }) => {
   const dispatch = useDispatch();
   const GetSupplydataaa = useSelector(
@@ -17,13 +16,6 @@ const DisplaySupplydata = ({ setActiveTab }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(25);
   const [formData, setFormData] = useState({
-    itemName: "~",
-    supplierName: "~",
-    cost: "~",
-    contactNumber: "~",
-    PageIndex: 1,
-  });
-  const [searchData, setSearchData] = useState({
     itemName: "~",
     supplierName: "~",
     cost: "~",
@@ -194,63 +186,7 @@ const DisplaySupplydata = ({ setActiveTab }) => {
         />
       )}
 
-         {/* {employeesData.length === 0 ? (
-            <div></div>
-          ) : (
-            <div className="flex  p-1 justify-between items-center bg-gray-100 border border-t-0 border-gray-300">
-              <div>
-                <select
-                  value={pageSize}
-                  onChange={handlePageSizeChange}
-                  className="border border-gray-300 rounded-lg px-3 py-2"
-                >
-                  <option value="25">25 per page</option>
-                  <option value="50">50 per page</option>
-                  <option value="75">75 per page</option>
-                  <option value="100">100 per page</option>
-                </select>
-              </div>
-              <div>
-                <span>
-                  <span>{formData.PageIndex}</span> / <span>{totalPages}</span>
-                </span>
-              </div>
-
-              <div className="flex justify-between">
-                <button
-                  onClick={() => handlePageChange(1)}
-                  disabled={formData.PageIndex === 1}
-                  className="border border-gray-300 px-2 py-1 rounded-md"
-                >
-                  <FaFastBackward />
-                </button>
-
-                <button
-                  onClick={() => handlePageChange(formData.PageIndex - 1)}
-                  disabled={formData.PageIndex === 1}
-                  className="border border-gray-300 px-2 py-1 rounded-md"
-                >
-                  <FaCaretLeft />
-                </button>
-
-                <button
-                  onClick={() => handlePageChange(formData.PageIndex + 1)}
-                  disabled={formData.PageIndex === totalPages}
-                  className="border border-gray-300 px-2 py-1 rounded-md"
-                >
-                  <FaCaretRight />
-                </button>
-
-                <button
-                  onClick={() => handlePageChange(totalPages)}
-                  disabled={formData.PageIndex === totalPages}
-                  className="border border-gray-300 px-2 py-1 rounded-md"
-                >
-                  <FaFastForward />
-                </button>
-              </div>
-            </div>
-          )} */}
+    
     </div>
   );
 };

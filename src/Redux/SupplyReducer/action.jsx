@@ -24,10 +24,10 @@ const getSupplieremailfailure = () => {
   };
 };
 
-export const GetSuppliernameData = (itemName,supplierName,cost,pagesize,pageindex) => (dispatch) => {
+export const GetSuppliernameData =  (dispatch) => {
   dispatch(getSupplieremailreq);
   return axios
-    .get(`${API_KEY}/api/auth/suppliers/${itemName}/${supplierName}/${cost}/${pagesize}/${pageindex}`, {
+    .get(`${API_KEY}/api/auth/suppliers`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
