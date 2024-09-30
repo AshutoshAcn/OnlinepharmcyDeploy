@@ -1,22 +1,45 @@
 import React, { useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
-const costAnalysisForm = React.memo(
+const PageAcessMasterForm = React.memo(
   ({ formData, handleChange, handleSubmit }) => {
- 
+    // useEffect(() =>{
+    //  console.log("helllo")
+    // },[])
 
     return (
       <form
         onSubmit={handleSubmit}
-        className="text-sm sm:flex sm:flex-row sm:space-x-4 sm:items-center py-2 sm:justify-center"
+        className="sm:flex sm:flex-row sm:space-x-4 sm:items-center py-2 sm:justify-center"
       >
         <div className="mb-4 sm:mb-0 sm:flex-1">
           <input
             type="text"
-            name="ItemName"
-            value={formData.ItemName === "~" ? "" : formData.ItemName}
+            name="itemName"
+            value={formData.itemName === "~" ? "" : formData.itemName}
             onChange={handleChange}
             placeholder="Item Name"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4 sm:mb-0 sm:flex-1">
+          <input
+            type="text"
+            name="city"
+            value={formData.city === "~" ? "" : formData.city}
+            onChange={handleChange}
+            placeholder="City"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        
+        <div className="mb-4 sm:mb-0 sm:flex-1">
+          <input
+            type="text"
+            name="zipCode"
+            value={formData.zipCode === "~" ? "" : formData.zipCode}
+            onChange={handleChange}
+            placeholder="Zip Code"
             className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
           />
         </div>
@@ -30,17 +53,7 @@ const costAnalysisForm = React.memo(
             className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
           />
         </div>
-        <div className="mb-4 sm:mb-0 sm:flex-1">
-          <input
-            type="text"
-            name="cost"
-            value={formData.cost === "~" ? "" : formData.cost}
-            onChange={handleChange}
-            placeholder="cost"
-            className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-       
+        
         <div className="text-center sm:flex-none">
           <button
             type="submit"
@@ -54,25 +67,4 @@ const costAnalysisForm = React.memo(
   }
 );
 
-export default costAnalysisForm;
- // useEffect(() => {
-  //   if (
-  //     formData.ItemName === "" ||
-  //     formData.supplierName === "" ||
-  //     formData.cost === "" ||
-  //     formData.contactNumber === ""
-  //   ) {
-  //     setFormData({
-  //       ...formData,
-  //       ItemName: "~",
-  //       supplierName: "~",
-  //       cost: "~",
-  //       contactNumber: "~",
-  //     });
-  //   }
-  // }, [
-  //   formData.ItemName,
-  //   formData.supplierName,
-  //   formData.cost,
-  //   formData.contactNumber,
-  // ]);
+export default PageAcessMasterForm;

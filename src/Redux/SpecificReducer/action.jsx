@@ -34,7 +34,7 @@ export const GetSPECIFICSuppliernameData =(itemName,supplierName,cost,pagesize,p
       },
     })
     .then((res) => {
-      return dispatch(getSPECIFICSupplieremailsuccess(res.data));
+      return dispatch(getSPECIFICSupplieremailsuccess(res.data.supplierCosts));
     })
     .catch((err) => {
       dispatch(getSPECIFICSupplieremailfailure());
