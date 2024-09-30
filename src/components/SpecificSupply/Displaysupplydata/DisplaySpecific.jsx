@@ -70,7 +70,7 @@ const DisplaySpecificSupplydata = ({ setActiveonlineTab }) => {
 
   return (
     <div>
-      <div className="bg-slate-300 px-4">
+      <div className=" px-4">
         <CostAnalysisForm
           formData={formData}
           handleChange={handleChange}

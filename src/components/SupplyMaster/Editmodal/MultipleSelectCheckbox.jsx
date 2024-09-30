@@ -87,7 +87,7 @@ export const MultiSelectCheckbox = ({
       {/* Custom display for selected options */}
 
       <div>
-        <h3>Selected Options:</h3>
+        <h3 className="px-1 py-1"></h3>
         {value.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 px-2 gap-1">
             {value.map((option) => (

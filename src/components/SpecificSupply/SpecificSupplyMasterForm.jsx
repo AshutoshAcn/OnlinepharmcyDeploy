@@ -83,8 +83,8 @@ const SpecificSupplyMasterForm = () => {
               Description: "",
               Cost: "",
             });
-            setSelectedItemName("")
-            setDropdownSupplier([])
+            setSelectedItemName("");
+            setDropdownSupplier([]);
           }
         }
       } catch (err) {
@@ -209,15 +209,14 @@ const SpecificSupplyMasterForm = () => {
                   error={submitted && errors.Cost}
                 />
 
-                <div className="px-20 py-6 w-[60%] m-auto border-gray-300 rounded-bl-lg rounded-br-lg flex items-center justify-center">
+                <div className="px-20 py-2 w-[60%] m-auto border-gray-300 rounded-bl-lg rounded-br-lg flex items-center justify-center">
                   <button
-                    className="bg-blue-500   m-auto text-center hover:bg-blue-700 text-white font-bold py-1 px-20 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500 py-2  m-auto text-center hover:bg-blue-700 text-white font-bold  px-10 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
                     Submit
                   </button>
                 </div>
-
               </div>
             </div>
 
@@ -248,9 +247,6 @@ const SpecificSupplyMasterForm = () => {
                 </svg>
               </div>
             )}
-
-            
-          
           </form>
         </div>
         <DisplaySpecificSupplydata />

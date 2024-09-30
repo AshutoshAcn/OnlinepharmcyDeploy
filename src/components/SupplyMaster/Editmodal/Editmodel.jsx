@@ -216,7 +216,7 @@ const Editmodel = ({ seteditmodalopen, sigledataId }) => {
 
   return (
     <div>
-      <div className="fixed z-50 text-sm sedan-sc-regular top-0 left-0 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50">
+      <div className="fixed z-50 text-[13px] sedan-sc-regular top-0 left-0 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50">
         <div className="bg-white p-4 sm:p-8 rounded-lg w-[100%]  sm:w-[80%] xl:w-[70%]">
           {/* ================  */}
           <div className="flex justify-end pb-4">
@@ -235,10 +235,8 @@ const Editmodel = ({ seteditmodalopen, sigledataId }) => {
               onSubmit={(e) => handleSaveData(e, true)}
               className="bg-white px-4 py-2 w-full"
             >
-              <h1 className="p-2 flex justify-between items-center bg-gray-100 border border-b-0  border-gray-300 rounded-tl-lg rounded-tr-lg text-[#023f79] text-[14px] font-bold">
-                <span>Add details Info</span>
-              </h1>
-              <div className="border py-2 px-4">
+             
+              <div className="py-0 px-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
                   <InputField
                     label="Supplier Name"
@@ -298,15 +296,7 @@ const Editmodel = ({ seteditmodalopen, sigledataId }) => {
                         <span className="text-red-500 ">{errors.city}</span>
                       )}
                     </label>
-                    {/* <Select
-                      options={formData.city}
-                      value={selectedCity || formData.city}
-                      onChange={handleCityChange}
-                      // onKeyPress={(e) => handleKeyPress(e, "text", 50)}
-                      placeholder="Select a city"
-                      name="city"
-                      // error={submitted && errors.city}
-                    /> */}
+                   
                     <InputField
                       label="City"
                       type="text"
@@ -412,7 +402,7 @@ const Editmodel = ({ seteditmodalopen, sigledataId }) => {
                   className="bg-blue-500 text-center hover:bg-blue-700 text-white font-bold py-2 px-20 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
-                  Submit
+                  Update 
                 </button>
               </div>
             </form>

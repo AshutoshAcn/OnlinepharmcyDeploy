@@ -144,13 +144,14 @@ const DisplaySupplydata = ({ setActiveonlineTab }) => {
                       <td className="border px-4 py-2">{el?.ContactEmail}</td>
                       <td className="border px-4 py-2">{el.ContactPhoneNo}</td>
                       <td className="border px-4 py-2 w-[60px] text-center">
-                        {el?.Address?.street}
+                      {el?.Address?.state}
                       </td>
                       <td className="border px-4 py-2 w-[60px] text-center">
                         {el?.Address?.city}
                       </td>
                       <td className="border px-4 py-2 w-[60px] text-center">
-                        {el?.Address?.state}
+                    
+                        {el?.Address?.street}
                       </td>
                       <td className="border px-4 py-2 w-[60px] text-center">
                         {el?.Address?.zipCode}
