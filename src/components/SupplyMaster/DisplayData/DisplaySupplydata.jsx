@@ -4,7 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { GetSuppliernameData } from "../../../Redux/SupplyReducer/action";
 import Editmodel from "../Editmodal/Editmodel";
 
-const DisplaySupplydata = ({ setActiveTab }) => {
+const DisplaySupplydata = ({ setActiveonlineTab }) => {
   const dispatch = useDispatch();
   const GetSupplydataaa = useSelector(
     (state) => state.SupplyReducer.GetSupplydataaa

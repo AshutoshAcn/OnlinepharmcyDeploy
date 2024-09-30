@@ -11,7 +11,7 @@ const PageListUser = React.memo(({ allUserPageAccessData }) => {
   );
   const activeusers = useSelector((state) => state.AppReducer.PageScreencheck);
   const [loading, setLoading] = useState(false);
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
 
  useEffect(() => {
     const transformedData = allUserPageAccessData.map((user) => {

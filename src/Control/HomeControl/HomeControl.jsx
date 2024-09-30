@@ -6,14 +6,14 @@ import { LoadLoggedusermenulist } from "../../Redux/AuthReducer/action";
 import Navbar from "../../components/Navbar";
 
 const HomeControl = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeonlineTab, setActiveonlineTab] = useState("home");
   const [employeeId, setEmployeeId] = useState(null);
   const [navbartoggle, setNavbartoggle] = useState(false);
   const dispatch = useDispatch();
   const Loadusermenulist = useSelector(
     (state) => state.AuthReducer.LOGGEDUSERMENULIST
   );
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
 
   useEffect(() => {
     dispatch(LoadLoggedusermenulist(loggeddata?.user?.access?.userId));
@@ -32,8 +32,8 @@ const HomeControl = () => {
     <>
       <Sidebar
         Loadusermenulist={Loadusermenulist}
-        setActiveTab={setActiveTab}
-        activeTab={activeTab}
+        setActiveonlineTab={setActiveonlineTab}
+        activeonlineTab={activeonlineTab}
         navbartoggle={navbartoggle}
         setNavbartoggle={setNavbartoggle}
       />
@@ -51,8 +51,8 @@ const HomeControl = () => {
         <Navbar navbartoggle={navbartoggle} setNavbartoggle={setNavbartoggle} />
 
         <Dashboard
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          activeonlineTab={activeonlineTab}
+          setActiveonlineTab={setActiveonlineTab}
           setEmployeeId={setEmployeeId}
           employeeId={employeeId}
         />

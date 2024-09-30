@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
     (state) => state.AuthReducer.isAuthenticated
   );
 
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   // console.log("======private loggeddata=====",loggeddata === null ? "true" :"false" )
 
   const Auth = loggeddata !== null 

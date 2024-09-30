@@ -27,7 +27,7 @@ const SupplyMasterForm = () => {
   const [selecterrors, setselectErrors] = useState({});
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [sucessmodel, setsucessmodal] = useState("");
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const today = new Date().toISOString().split("T")[0];

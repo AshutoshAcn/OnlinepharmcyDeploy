@@ -9,7 +9,7 @@ import {
   MdKeyboardArrowLeft,
 } from "react-icons/md";
 
-const FinalReportScreen = ({ setActiveTab }) => {
+const FinalReportScreen = ({ setActiveonlineTab }) => {
   const [editMode, setEditmode] = useState(false);
   const [formData, setFormData] = useState({
     itemName: "~",

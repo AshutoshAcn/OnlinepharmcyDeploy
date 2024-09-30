@@ -8,8 +8,8 @@ import { LoadLoggedusermenulist } from "../Redux/AuthReducer/action";
 
 const Sidebar = React.memo(
   ({
-    setActiveTab,
-    activeTab,
+    setActiveonlineTab,
+    activeonlineTab,
     Loadusermenulist,
     navbartoggle,
     setNavbartoggle,
@@ -17,38 +17,38 @@ const Sidebar = React.memo(
     const [alertModel, setAlertModel] = useState(null);
     const [changeTab, setChangeTab] = useState("");
     const dispatch = useDispatch();
-    const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+    const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
     
   useEffect(() => {
     dispatch(LoadLoggedusermenulist(loggeddata?.user?.access?.userId));
   }, [loggeddata?.user?.access?.userId]);
 
     useEffect(() => {
-      const savedTab = localStorage.getItem("activeTab");
+      const savedTab = localStorage.getItem("activeonlineTab");
       if (savedTab) {
-        setActiveTab(savedTab);
+        setActiveonlineTab(savedTab);
       }
     }, [Loadusermenulist]);
     // console.log("Loadusermenulist", Loadusermenulist);
 
     const handleTabClick = (tab) => {
-      if (localStorage.activeTab === "interview phase viewHr") {
+      if (localStorage.activeonlineTab === "interview phase viewHr") {
         setAlertModel("Are you sure you want to exit this phase?");
         setChangeTab(tab);
       } else {
         localStorage.removeItem("secondphaseempid");
         localStorage.removeItem("secondphaseemail");
 
-        setActiveTab(tab);
-        localStorage.setItem("activeTab", tab);
+        setActiveonlineTab(tab);
+        localStorage.setItem("activeonlineTab", tab);
       }
     };
 
     const handleYesAlertModal = () => {
       setAlertModel(null);
 
-      setActiveTab(changeTab);
-      localStorage.setItem("activeTab", changeTab);
+      setActiveonlineTab(changeTab);
+      localStorage.setItem("activeonlineTab", changeTab);
     };
     const handleNoAlertModal = () => {
       setAlertModel(null);
@@ -83,7 +83,7 @@ const Sidebar = React.memo(
                 <li
                   key={index}
                   className={`py-2 px-4 cursor-pointer hover:bg-slate-700 transition-colors duration-300 border-b border-dashed border-gray-500 ${
-                    activeTab === menuItem?.PageName.toLowerCase()
+                    activeonlineTab === menuItem?.PageName.toLowerCase()
                       ? "bg-gray-600"
                       : ""
                   }`}

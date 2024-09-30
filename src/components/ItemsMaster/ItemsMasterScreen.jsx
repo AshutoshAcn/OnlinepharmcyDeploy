@@ -13,7 +13,7 @@ import {
 import ErrorModal from "../../model/ErrorModal";
 import SuccessModal from "../../model/SuccessModal";
 
-const ItemsMasterScreen = ({ setactiveTab }) => {
+const ItemsMasterScreen = ({ setActiveonlineTab }) => {
   const [ItemName, setItemName] = useState("");
   const [errorm, setErrorm] = useState(null);
   const [sucessmodel, setsucessmodal] = useState(null);
@@ -22,7 +22,7 @@ const ItemsMasterScreen = ({ setactiveTab }) => {
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [editingRows, setEditingRows] = useState([]);
   const [errors, setErrors] = useState({});
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   const dispatch = useDispatch();
   const Getitemsdaata = useSelector(
     (state) => state.ItemsReducer.GetItemsnamedataaa

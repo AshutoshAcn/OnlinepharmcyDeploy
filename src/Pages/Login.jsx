@@ -39,13 +39,10 @@ const Login = () => {
       if (actionResult.type === "LOGINSUCCESS") {
         if (actionResult.payload.data.message === "Login successful") {
           localStorage.setItem(
-            "userlogged",
+            "useronlinelogged",
             JSON.stringify(actionResult.payload.data)
           );
-          // localStorage.setItem(
-          //   "userlogged",
-          //   JSON.stringify(actionResult.payload.data.token)
-          // );
+        
           setsucessmodal("Login Successfully");
           setLoading(false);
 

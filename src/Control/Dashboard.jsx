@@ -11,49 +11,49 @@ import FinalReportScreen from "../components/Main/FinalReportScreen";
 
 
 
-const Dashboard = ({ activeTab, setEmployeeId, employeeId, setActiveTab }) => {
+const Dashboard = ({ activeonlineTab, setEmployeeId, employeeId, setActiveonlineTab }) => {
   const [edit, SetEdit] = useState(false);
 
 
   
   return (
     <div className="flex-grow overflow-y-auto pt-[62px]">
-      {activeTab === "home" && <Homelandingpage />}
+      {activeonlineTab === "home" && <Homelandingpage />}
 
-      {activeTab === "pageaccessmaster" && (
+      {activeonlineTab === "pageaccessmaster" && (
         <div>
           <PageScreenAcess />
         </div>
       )}
 
-      {activeTab === "accessmaster" && (
+      {activeonlineTab === "accessmaster" && (
         <div>
-          <ApplicationAcessMaster setActiveTab={setActiveTab} />
+          <ApplicationAcessMaster setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-      {activeTab === "supplierportfolio" && (
+      {activeonlineTab === "supplierportfolio" && (
         <div>
-          <SupplyMasterForm setActiveTab={setActiveTab} />
+          <SupplyMasterForm setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-      {activeTab === "suppliercostanalysis" && (
+      {activeonlineTab === "suppliercostanalysis" && (
         <div>
-         <SpecificSupplyMasterForm setActiveTab={setActiveTab} />
+         <SpecificSupplyMasterForm setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-    {activeTab === "productinventory" && (
+    {activeonlineTab === "productinventory" && (
         <div>
-          <ItemsMasterScreen setActiveTab={setActiveTab} />
+          <ItemsMasterScreen setActiveonlineTab={setActiveonlineTab} />
         </div>
       )}
 
-      {activeTab === "reports" && (
+      {activeonlineTab === "reports" && (
         <div>
-          {/* <SpecificSupplyMasterForm setActiveTab={setActiveTab} /> */}
-          <FinalReportScreen setActiveTab={setActiveTab}/>
+          {/* <SpecificSupplyMasterForm setActiveonlineTab={setActiveonlineTab} /> */}
+          <FinalReportScreen setActiveonlineTab={setActiveonlineTab}/>
         </div>
       )}
     </div>

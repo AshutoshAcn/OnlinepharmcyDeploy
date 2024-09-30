@@ -2,7 +2,7 @@ import axios from "axios";
 import * as types from "./actionType";
 import { API_KEY } from "../APIKEY/Api";
 
-const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
 const token = loggeddata?.token;
 
 const GetAllUsersPageAccessReq = () => {

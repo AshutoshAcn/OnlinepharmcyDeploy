@@ -208,14 +208,16 @@ const SpecificSupplyMasterForm = () => {
                   onKeyPress={(e) => handleKeyPress(e, "number", 10)}
                   error={submitted && errors.Cost}
                 />
-                <div className="px-4 py-4 w-[100%]  border-gray-300 rounded-bl-lg rounded-br-lg flex justify-center">
+
+                <div className="px-20 py-6 w-[60%] m-auto border-gray-300 rounded-bl-lg rounded-br-lg flex items-center justify-center">
                   <button
-                    className="bg-blue-500 text-center hover:bg-blue-700 text-white font-bold py-1 px-20 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500   m-auto text-center hover:bg-blue-700 text-white font-bold py-1 px-20 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
                     Submit
                   </button>
                 </div>
+
               </div>
             </div>
 

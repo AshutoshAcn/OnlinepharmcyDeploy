@@ -2,8 +2,8 @@ import * as types from "./actiotypes";
 
 const initialState = {
   isLoading: false,
-  isAuthenticated: localStorage.getItem("token") ? true : false,
-  token: localStorage.getItem("token") || "",
+  isAuthenticated: localStorage.getItem("onlinetoken") ? true : false,
+  token: localStorage.getItem("onlinetoken") || "",
   userlogged:[],
   PageAcessdetails: [],
   LOGGEDUSERMENULIST: [],
@@ -19,7 +19,7 @@ export const Reducer = (state = initialState, action) => {
         isLoading: true,
       };
     case types.LOGINSUCCESS:
-      localStorage.setItem("token", "true");
+      localStorage.setItem("onlinetoken", "true");
       return {
         ...state,
         isLoading: false,
@@ -27,7 +27,7 @@ export const Reducer = (state = initialState, action) => {
         token:payload
       };
     case types.LOGOUTSUCCESS:
-      localStorage.removeItem("token");
+      localStorage.removeItem("onlinetoken");
       return {
         ...state,
         isAuthenticated: false,

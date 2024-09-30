@@ -11,9 +11,9 @@ const Navbar = ({ navbartoggle, setNavbartoggle }) => {
   const dispatch = useDispatch();
   const tokendta = useSelector((state) => state.AuthReducer.isAuthenticated);
   const token = useSelector((state) => state.AuthReducer.token);
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   const [loading, SetLoading] = useState(false);
-  const User = useSelector((state) => state.AuthReducer.userlogged);
+
 
   useEffect(() => {
     SetLoading(false);

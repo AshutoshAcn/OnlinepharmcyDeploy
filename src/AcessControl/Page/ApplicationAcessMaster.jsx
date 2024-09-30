@@ -27,14 +27,14 @@ const ApplicationAcessMaster = () => {
   const [TempActive, SetTempActive] = useState("");
   const [Singledata, SetSingledata] = useState("");
   const [id, setID] = useState("");
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   const [currentuserloggedin,setcurrentuserlogin] = useState(loggeddata?.user?.email)
 
     useEffect(() =>{
       const currentUser = PageAcessdata.find(user => user.email === currentuserloggedin);
       // console.log("currentUser",currentUser)
       const checkstatus = currentUser && currentUser.active === "false"
-      console.log(" inside useEffect checkstatus",checkstatus)
+      // console.log(" inside useEffect checkstatus",checkstatus)
     },[loggeddata?.user?.email])
 
   useEffect(() => {
@@ -134,15 +134,7 @@ const ApplicationAcessMaster = () => {
         setEditmode(false);
          if(res.type === "PAGEUPDATEEMPLOYEEACESSSUCCESS"){
              if(res?.payload?.data?.message === "User account deactivated succesfully"){
-              //  localStorage.clear()
-              //  NavigationPreloadManager()
-              // navigate("/")
-              // const currentUser = PageAcessdata.find(user => user.email === currentuserloggedin);
-              // const currentUser = PageAcessdata.find(user => user.email === currentuserloggedin);
-              // // console.log("currentUser",currentUser)
-              // const checkstatus = currentUser && currentUser.active === "false"
-              // console.log("checkstatus",checkstatus)
-            
+
              }
          }
         dispatch(

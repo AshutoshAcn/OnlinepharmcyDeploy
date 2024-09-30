@@ -4,7 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { GetSPECIFICSuppliernameData } from "../../../Redux/SpecificReducer/action";
 import CostAnalysisForm from "./CostAnalysisForm";
 
-const DisplaySpecificSupplydata = ({ setActiveTab }) => {
+const DisplaySpecificSupplydata = ({ setActiveonlineTab }) => {
   const dispatch = useDispatch();
   const GetSupplydataaa = useSelector(
     (state) => state.SpecificReducer.GetSpecificSupplydataaa

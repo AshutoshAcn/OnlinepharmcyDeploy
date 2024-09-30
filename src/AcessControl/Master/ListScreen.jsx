@@ -11,7 +11,7 @@ const ListScreen = React.memo(({ selectedUserId, selectedUser, setSelectedUser, 
   const [allChecked, setAllChecked] = useState(false);
   const [errormodel, setErrormodel] = useState(null);
   const [sucessmodel, setsucessmodal] = useState(null);
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   // Filter the user data based on selectedUser email
   const selectedUserData = allUserPageAccessData.find(user => user.email === selectedUser);
 

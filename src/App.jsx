@@ -24,9 +24,9 @@ function App() {
   const [unsupportedBrowser, setUnsupportedBrowser] = useState(false);
   const navigate = useNavigate();
   const sessionTimeoutRef = useRef(null);
-  const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+  const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
   const handleSessionTimeout = useCallback(() => {
-    const loggeddata = JSON.parse(localStorage.getItem("userlogged"));
+    const loggeddata = JSON.parse(localStorage.getItem("useronlinelogged"));
     if (loggeddata !== null) {
       sessionTimeoutRef.current = setTimeout(() => {
         localStorage.clear();
